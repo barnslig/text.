@@ -1,0 +1,75 @@
+body {
+	padding:		0;
+	margin:			0;
+	font-family:	Sans-Serif;
+	font-size:		14px;
+	background:		#ddd;
+}
+
+div#hideall {
+	background:		black;
+	opacity:		0.4;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	right:			0;
+	bottom:			0;
+	z-index:		42;
+}
+
+header {
+	position:		fixed;
+	top:			0;
+	left:			0;
+	right:			0;
+	background:		white;
+	height:			103px;
+}
+header h1 {
+	float:			left;
+	margin-left:	10px;
+	font-family:	Copse;
+}
+
+/* the litte navigation menu at the top on the right side */
+header nav {
+	float:			right;
+	margin-top:		25px;
+	margin-right:	25px;
+}
+header nav ul {
+	list-style:		none;
+	margin:			0;
+	padding:		0;
+}
+header nav ul li {
+	float:			left;
+	opacity:		0.4;
+}
+header nav ul li a {
+	display:		block;
+	background:		lightgray;
+	padding:		5px;
+	color:			black;
+	text-decoration:none;
+	border-radius:	3px;
+	margin-left:	15px;
+}
+header nav ul li:hover {
+	opacity:		0.7;
+}
+
+/* the document itself in the a4 pagesize */
+article {
+	width:			210mm;
+	height:			297mm;
+	padding:		2.54cm;
+	border:			1px gray solid;
+	box-shadow:		0 0 2px gray;
+	overflow:		hidden;
+	margin:			auto;
+	margin-top:		113px;
+	margin-bottom:	10px;
+	font-family:	Ubuntu;
+	background:		white;
+}

@@ -1,0 +1,63 @@
+header #icons {
+	clear:			both;
+	width:			100%;
+	height:			30px;
+	vertical-align:	top;
+	border-top:		1px black solid;
+	border-bottom:	1px black solid;
+	box-shadow:		0 0 3px gray;
+	padding-left:	42px;
+}
+header #icons * {
+	float:			left;
+}
+
+/* simple list for things like the bold icon */
+header #icons .icons_simple {
+	list-style:		none;
+	margin:			0;
+	padding:		0;
+}
+header #icons .icons_simple li a {
+	display:		block;
+	padding:		7px;
+}
+header #icons .icons_simple li a:hover {
+	background:		#eee;
+}
+
+/* lists for things like the font family, font size, headline etc… */
+header #icons .icons_list {
+	list-style:		none;
+	margin:			0;
+	margin-left:	7px;
+	padding:		0;
+	overflow:		hidden;
+	border:			1px black solid;
+	border-top:		0;
+	border-bottom:	0;
+	background:		white;
+	width:			100px;
+	max-height:		30px;
+}
+header #icons .icons_list:hover {
+	max-height:		1000px;
+	border-bottom:	1px black solid;
+	box-shadow:		0 0 3px gray;
+}
+header #icons .icons_list li span {
+	width:			100px;
+	color:			black;
+	padding:		7px;
+}
+header #icons .icons_list li a {
+	display:		block;
+	width:			100px;
+	color:			black;
+	padding:		7px;
+	text-align:		left;
+	text-decoration:none;
+}
+header #icons .icons_list li a:hover {
+	background:		#eee;
+}
