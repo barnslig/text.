@@ -57,7 +57,7 @@ function login(http_bind) {
 	try {
 		// make a new object for the connection settings
 		oArgs = new Object();
-		oArgs.httpbase = http_bind;
+		oArgs.httpbase = "/http-bind/";
 		oArgs.timerval = 2000;
 		oArgs.authtype = "saslanon";
 		oArgs.domain = "anonymous.draugr.de";
