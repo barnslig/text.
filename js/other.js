@@ -12,3 +12,19 @@ function randomString() {
 	}
 	return randomstring;
 }
+
+// function to start the design mode for the document
+function startDesign() {
+	// start the design mode
+	document.getElementsByTagName("article")[0].designMode = "On";
+}
+
+// function to replace all <div> tags with <p> for a correct layout
+function replaceDivWithP() {
+	// get the document
+	var doc = document.getElementsByTagName("article")[0];
+	// replace
+	var out = doc.innerHTML.replace("div", "p");
+	// set the new content
+	doc.innerHTML = out;
+}

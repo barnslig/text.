@@ -12,6 +12,20 @@ header #icons * {
 	float:			left;
 }
 
+/* seperators */
+header #icons .seperator {
+	width:			0;
+	height:			20px;
+	border-left:	1px gray solid;
+	margin:			5px;
+}
+header #icons .blind_seperator {
+	width:			0;
+	height:			20px;
+	border-left:	1px white solid;
+	margin:			5px;
+}
+
 /* simple list for things like the bold icon */
 header #icons .icons_simple {
 	list-style:		none;
@@ -30,7 +44,7 @@ header #icons .icons_simple li a:hover {
 header #icons .icons_list {
 	list-style:		none;
 	margin:			0;
-	margin-left:	7px;
+	margin-left:	5px;
 	padding:		0;
 	overflow:		hidden;
 	border:			1px black solid;

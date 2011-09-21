@@ -15,20 +15,26 @@
 		</script>
 		<script type="text/javascript" src="js/jsjac.js"></script>
 		<script type="text/javascript" src="js/muc-collab.js"></script>
+		<script type="text/javascript" src="js/wysiwyg.js"></script>
 		
 		<!-- style things -->
-		<style type="text/css">
-			/* fonts */
-			@import url(http://fonts.googleapis.com/css?family=Copse);
-			@import url(http://fonts.googleapis.com/css?family=Ubuntu);
-			
+		<style type="text/css">			
 			/* styles */
 			@import url(css/style.css);
 			@import url(css/icon_bar.css);
+			
+			/* fonts */
+			@import url(http://fonts.googleapis.com/css?family=Copse);
+			@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+			@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+			@font-face {
+				font-family:	Junction;
+				src:			url('http://caracl.de/Junction.otf') format('otf');
+			}
 		</style>
 		
 	</head>
-	<body onload="makeEverythingOk();" onunload="disconnect();">
+	<body onload="makeEverythingOk();startDesign();" onunload="disconnect();">
 		<div id="hideall"></div>
 		<header>
 			<h1>Text.</h1>
@@ -42,33 +48,45 @@
 			</nav>
 			<section id="icons">
 				<ul class="icons_simple">
-					<li><a href="#"><img src="img/text_bold.png" alt="bold" title="bold"></a></li>
-					<li><a href="#"><img src="img/text_underline.png" alt="underline" title="underline"></a></li>
-					<li><a href="#"><img src="img/text_italic.png" alt="italic" title="italic"></a></li>
+					<li><a href="javascript:format('undo', null);"><img src="img/arrow_undo.png" alt="undo" title="undo"></a></li>
+					<li><a href="javascript:format('redo', null);"><img src="img/arrow_redo.png" alt="redo" title="redo"></a></li>
 				</ul>
 				<ul class="icons_list">
 					<li><span>Headline</span></li>
-					<li><a href="#">H1</a></li>
-					<li><a href="#">H2</a></li>
-					<li><a href="#">H3</a></li>
-					<li><a href="#">H4</a></li>
+					<li><a href="javascript:format('formatBlock', 'p');">normal</a></li>
+					<li><a href="javascript:format('formatBlock', 'h1');">H1</a></li>
+					<li><a href="javascript:format('formatBlock', 'h2');">H2</a></li>
+					<li><a href="javascript:format('formatBlock', 'h3');">H3</a></li>
+					<li><a href="javascript:format('formatBlock', 'h4');">H4</a></li>
 				</ul>
 				<ul class="icons_list">
 					<li><span>Font</span></li>
-					<li><a href="#">Free Sans</a></li>
-					<li><a href="#">Junction</a></li>
-					<li><a href="#">Droid Serif</a></li>
-					<li><a href="#">Monospace</a></li>
-					<li><a href="#">Copse</a></li>
+					<li><a href="javascript:format('fontName', 'sans-serif');"><span style="font-family:sans-serif;">Sans Serif</span></a></li>
+					<li><a href="javascript:format('fontName', 'Junction');"><span style="font-family:Junction;">Junction</span></a></li>
+					<li><a href="javascript:format('fontName', 'Ubuntu');"><span style="font-family:Ubuntu;">Ubuntu</span></a></li>
+					<li><a href="javascript:format('fontName', 'Droid Serif');"><span style="font-family:Droid Serif;">Droid Serif</span></a></li>
+					<li><a href="javascript:format('fontName', 'Copse');"><span style="font-family:Copse;">Copse</span></a></li>
+					<li><a href="javascript:format('fontName', 'monospace');"><span style="font-family:monospace;">Monospace</span></a></li>
 				</ul>
 				<ul class="icons_list">
 					<li><span>Size</span></li>
-					<li><a href="#">8</a></li>
-					<li><a href="#">10</a></li>
-					<li><a href="#">12</a></li>
-					<li><a href="#">15</a></li>
-					<li><a href="#">20</a></li>
+					<li><a href="javascript:format('fontSize', '1');">1</a></li>
+					<li><a href="javascript:format('fontSize', '2');">2</a></li>
+					<li><a href="javascript:format('fontSize', '3');">3</a></li>
+					<li><a href="javascript:format('fontSize', '4');">4</a></li>
+					<li><a href="javascript:format('fontSize', '5');">5</a></li>
 				</ul>
+				<div class="blind_seperator"></div>
+				<ul class="icons_simple">
+					<li><a href="javascript:format('bold', null);"><img src="img/text_bold.png" alt="bold" title="bold"></a></li>
+					<li><a href="javascript:format('underline', null);"><img src="img/text_underline.png" alt="underline" title="underline"></a></li>
+					<li><a href="javascript:format('italic', null);"><img src="img/text_italic.png" alt="italic" title="italic"></a></li>
+				</ul>
+				<div class="seperator"></div>
+				<ul class="icons_simple">
+					<li><a href="javascript:format('strikeThrough', null);"><img src="img/text_strikethrough.png" alt="strikethrough" title="strikethrough"></a></li>
+					<li><a href="javascript:format('superscript', null);"><img src="img/text_superscript.png" alt="superscript" title="superscript"></a></li>
+					<li><a href="javascript:format('subscript', null);"><img src="img/text_subscript.png" alt="subscript" title="subscript"></a></li>
 			</section>
 		</header>
 		
